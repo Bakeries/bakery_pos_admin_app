@@ -63,6 +63,7 @@
     <string name="controls">Controls</string>
     <string name="employee_control_title">Employee Control Title</string>
     <string name="employee_password">Employee Password</string>
+    <string name="product_price_title">Product Price</string>
 
     <string-array name="veganTags">
         <item>Yes</item>
