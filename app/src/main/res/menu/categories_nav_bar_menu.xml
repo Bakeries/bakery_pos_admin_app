@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/allProducts"
+        android:title="@string/all_products"
+        android:icon="@drawable/ic_products"/>
+
+    <item
+        android:id="@+id/breads"
+        android:title="@string/breads"
+        android:icon="@drawable/ic_products"/>
+
+    <item
+        android:id="@+id/salty"
+        android:title="@string/salty"
+        android:icon="@drawable/ic_products"/>
+
+    <item
+        android:id="@+id/sweets"
+        android:title="@string/sweets"
+        android:icon="@drawable/ic_products"/>
+
+    <item
+        android:id="@+id/drinks"
+        android:title="@string/drinks"
+        android:icon="@drawable/ic_drink"/>
+
+</menu>

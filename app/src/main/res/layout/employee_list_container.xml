@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/headers_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/employeeID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/employee_id"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/employeeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/employee_name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="@id/employeeID"
+        app:layout_constraintStart_toEndOf="@id/employeeID"
+        app:layout_constraintEnd_toStartOf="@id/employeeControlsLayout"
+        app:layout_constraintBottom_toBottomOf="@id/employeeID" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/employeeControlsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/employeeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/employeeName">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/editEmployeeBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_edit"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/deleteEmployeeBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_trash"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editEmployeeBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

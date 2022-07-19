@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.EmployeesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controlsHeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/headers_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchHeaderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/searchBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:importantForAutofill="no" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/clearBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintTop_toTopOf="@id/searchBar"
+                app:layout_constraintStart_toEndOf="@id/searchBar"
+                app:layout_constraintEnd_toStartOf="@id/searchBtn"
+                app:layout_constraintBottom_toBottomOf="@id/searchBar" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/searchBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintTop_toTopOf="@id/searchBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/searchBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addHeaderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_round_background"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="@id/searchHeaderLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/searchHeaderLayout">
+
+            <TextView
+                android:id="@+id/addEmployeeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_employee"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/addEmployeeBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_add"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/addEmployeeLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/employeesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/controlsHeaderLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/employeesListHeaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/employeeID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_id"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/employeeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/employee_name"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toTopOf="@id/employeeID"
+                app:layout_constraintStart_toEndOf="@id/employeeID"
+                app:layout_constraintEnd_toStartOf="@id/listControlsLayoutTitle"
+                app:layout_constraintBottom_toBottomOf="@id/employeeID" />
+            <TextView
+                android:id="@+id/listControlsLayoutTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/controls"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toTopOf="@id/employeeName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/employeeName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/employeesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/employeesListHeaderLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error"
+        android:textSize="25sp"
+        android:textColor="@color/design_default_color_error"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/controlsHeaderLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

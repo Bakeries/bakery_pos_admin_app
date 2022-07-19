@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">bakery-pos-admin-app</string>
+    <string name="breads">Breads</string>
+    <string name="salty">Salty</string>
+    <string name="sweets">Sweets</string>
+    <string name="drinks">Drinks</string>
+    <string name="coffees">Coffees</string>
+    <string name="billing">Billing</string>
+    <string name="_0_0">0.00</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_dot">.</string>
+    <string name="search_product">Search Product</string>
+    <string name="price">Price</string>
+    <string name="qty">Qty</string>
+    <string name="products">Products</string>
+    <string name="priceTotalTag">$0.00</string>
+    <string name="total">Total</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="admin_id">Admin ID</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="product_name">Product Name</string>
+    <string name="vegan_tag">VEGAN_TAG</string>
+    <string name="add">ADD</string>
+    <string name="product_price">Product_Price</string>
+    <string name="_Qty_Default_Value">0</string>
+    <string name="all_products">All</string>
+    <string name="error">Error</string>
+    <string name="product_description">Product Description</string>
+    <string name="discount">Discount</string>
+    <string name="paid_online">Paid Online</string>
+    <string name="cash">Cash</string>
+    <string name="visa">VISA</string>
+    <string name="done">DONE</string>
+    <string name="pay">PAY</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="change">Change</string>
+    <string name="del">DEL</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="employees">Employees</string>
+
+    <string name="search">Search</string>
+    <string name="add_product">Add Product</string>
+    <string name="product_control_title">Product Control Title</string>
+    <string name="is_it_vegan">Is it vegan?</string>
+    <string name="select_category">Select category</string>
+    <string name="save">Save</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="employee_id">ID</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="controls">Controls</string>
+    <string name="employee_control_title">Employee Control Title</string>
+    <string name="employee_password">Employee Password</string>
+
+    <string-array name="veganTags">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>
