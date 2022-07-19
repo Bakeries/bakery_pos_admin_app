@@ -1,0 +1,1 @@
+# bakery_pos_admin_app
